@@ -2,6 +2,8 @@
 
 ## How to use
 
+### Configure Gradle Library Project
+
 - Configure your Project's `build.gradle` like this :
 
 		buildscript {
@@ -21,6 +23,51 @@
 			jcenter()
 		    }
 		}
+
+- In the library module's `build.gradle`, add following:
+
+		apply plugin: 'com.android.library'
+
+		ext {
+		    bintrayRepo = 'REPOSITORY_NAME'
+		    bintrayName = 'PACKAGE_NAME'
+
+		    publishedGroupId = 'GROUP_ID'
+		    libraryName = 'LIBRARY_NAME'
+		    artifact = 'LIBRARY_NAME'
+
+		    libraryDescription = 'LIBRARY_DESCRIPTION'
+
+		    siteUrl = 'SITE_URL'
+		    gitUrl = 'GIT_URL'
+
+		    libraryVersion = 'LIBRARY_VERSION'
+
+		    developerId = 'DEVELOPER_ID'
+		    developerName = 'DEVELOPER_NAME'
+		    developerEmail = 'DEVELOPER_EMAIL'
+		    
+		    organization = 'ORGANIZATION' // if you push to organization's repository.
+
+		    licenseName = 'The Apache Software License, Version 2.0'
+		    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+		    allLicenses = ["Apache-2.0"]
+		}
+
+- Finally, at the end of the library module's `build.gradle`, add:
+
+		//These two remote files contain Bintray configuration as described above.
+		apply from: 'https://raw.githubusercontent.com/KassyLab/template-files/master/android/gradle/install.gradle'
+		apply from: 'https://raw.githubusercontent.com/KassyLab/template-files/master/android/gradle/bintray.gradle'
+
+### Configure Bintray credentials
+
+### Uploading to Bintray
+
+CD to Root of Android Studio Project, and run these commands:
+
+	./gradlew install
+	./gradlew build bintrayUpload
 
 ## License
 
