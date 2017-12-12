@@ -1,6 +1,29 @@
-### License
+# Gradle Template Configuration files
 
-	Copyright © 2016 Joaquim Ley
+## How to use
+
+- Configure your Project's `build.gradle` like this :
+	buildscript {
+	    repositories {
+		jcenter()
+	    }
+	    dependencies {
+		classpath 'com.android.tools.build:gradle:3.0.1'
+		classpath 'com.github.dcendents:android-maven-gradle-plugin:2.0'
+	    }
+	}
+	plugins {
+	    id "com.jfrog.bintray" version "1.7.3"
+	}
+	allprojects {
+	    repositories {
+		jcenter()
+	    }
+	}
+
+## License
+
+	Copyright © 2016 KassyLab
 
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
