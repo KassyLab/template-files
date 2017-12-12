@@ -62,6 +62,17 @@
 
 ### Configure Bintray credentials
 
+There are two methods to configure Bintray credentials :
+
+- Add the two environment variables following :
+
+		export BINTRAY_USER="Your Bintray user ID"
+		export BINTRAY_KEY="Your Bintray API Key"
+
+- Run Bintray upload command with following arguments :
+
+		./gradlew build bintrayUpload -PbintrayUser=<Your Bintray user ID> -PbintrayApiKey=<Your Bintray API Key>
+
 ### Uploading to Bintray
 
 CD to Root of Android Studio Project, and run these commands:
