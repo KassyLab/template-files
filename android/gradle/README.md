@@ -4,40 +4,23 @@
 
 - Configure your Project's `build.gradle` like this :
 
-		buildscript {
-		    repositories {
-		        jcenter()
-		    }
-		    dependencies {
-		        classpath 'com.android.tools.build:gradle:2.2.2'
-		        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.4.1'
-		    }
-		}
-		plugins {
-		    id "com.jfrog.bintray" version "1.7"
-		}
-		allprojects {
-		    repositories {
-		        jcenter()
-		    }
-		}
-		buildscript {
-		    repositories {
-			jcenter()
-		    }
-		    dependencies {
-			classpath 'com.android.tools.build:gradle:3.0.1'
-			classpath 'com.github.dcendents:android-maven-gradle-plugin:2.0'
-		    }
-		}
-		plugins {
-		    id "com.jfrog.bintray" version "1.7.3"
-		}
-		allprojects {
-		    repositories {
-			jcenter()
-		    }
-		}
+	buildscript {
+	    repositories {
+		jcenter()
+	    }
+	    dependencies {
+		classpath 'com.android.tools.build:gradle:3.0.1'
+		classpath 'com.github.dcendents:android-maven-gradle-plugin:2.0'
+	    }
+	}
+	plugins {
+	    id "com.jfrog.bintray" version "1.7.3"
+	}
+	allprojects {
+	    repositories {
+		jcenter()
+	    }
+	}
 
 ## License
 
