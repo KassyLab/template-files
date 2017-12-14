@@ -2,9 +2,9 @@
 
 ## Installation
 
-  dependencies {
-    implementation 'com.kassylab:{{artefact-id}}:{{version}}'
-  }
+	dependencies {
+		implementation 'com.kassylab:{{artefact-id}}:{{version}}'
+	}
 
 ## Usage
 
