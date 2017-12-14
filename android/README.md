@@ -2,13 +2,13 @@
 
 ## Installation
 
-- Gradle's version 3.0 or higher
+- Gradle 3.x:
 
 		dependencies {
 			implementation 'com.kassylab:{{artefact-id}}:{{version}}'
 		}
 
-- Gradle's version less than 3.0
+- Gradle 2.x:
 
 		dependencies {
 			compile 'com.kassylab:{{artefact-id}}:{{version}}'
